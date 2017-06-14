@@ -15,9 +15,9 @@ let viewer = new Cesium.Viewer("cesiumContainer", {
     url: 'http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer'
   }),
   baseLayerPicker: false,
-  animation: true,
+  animation: false,
   navigationHelpButton: false,
-  timeline: true,
+  timeline: false,
   geocoder: false,
   fullscreenButton: false,
   vrButton: false,

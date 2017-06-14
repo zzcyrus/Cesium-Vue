@@ -1,17 +1,22 @@
 <template>
   <div id="app">
+  
+    <CesiumMenu></CesiumMenu>
     <VectorLayer></VectorLayer>
+  
   </div>
 </template>
 
 <script>
 
+import CesiumMenu from './views/CesiumMenu.vue'
 import VectorLayer from './views/VectorLayer.vue'
 
 
 export default {
-  components:{
-    'VectorLayer':VectorLayer
+  components: {
+    'VectorLayer': VectorLayer,
+    'CesiumMenu': CesiumMenu
   },
   data() {
     return {
