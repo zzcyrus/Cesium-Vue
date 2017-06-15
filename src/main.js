@@ -27,6 +27,10 @@ let viewer = new Cesium.Viewer("cesiumContainer", {
   homeButton: false,
 });
 
+viewer.camera.flyTo({
+  destination: Cesium.Cartesian3.fromDegrees(109.78, 28.36, 15000000)
+});
+
 Vue.prototype.viewer = viewer;
 
 
