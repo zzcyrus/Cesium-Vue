@@ -2,9 +2,11 @@ import Vue from 'vue'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
 import App from './App.vue'
+import store from '../vuex/store'
 
 Vue.use(ElementUI)
 
+//Cesium基本参数设置
 window.CESIUM_BASE_URL = "/static/Cesium";
 require("../static/Cesium/Widgets/widgets.css");
 require("../static/Cesium/Cesium.js");
@@ -36,5 +38,6 @@ Vue.prototype.viewer = viewer;
 
 new Vue({
   el: '#app',
+  store,
   render: h => h(App)
 })

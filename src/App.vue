@@ -10,7 +10,7 @@
 <script>
 
 import CesiumMenu from './views/CesiumMenu.vue'
-import VectorLayer from './views/VectorLayer.vue'
+import VectorLayer from './views/layers/VectorLayer.vue'
 
 
 export default {

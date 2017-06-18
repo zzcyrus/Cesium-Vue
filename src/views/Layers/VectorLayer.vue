@@ -13,7 +13,7 @@
 
 <script>
 
-import drawer from '../components/drawer.vue'
+import drawer from 'components/drawer.vue'
 
 export default {
   components: {
@@ -100,29 +100,29 @@ export default {
     },
 
     changeShow(type) {
-      let viewer=this.viewer;
+      let viewer = this.viewer;
       switch (type) {
         case 'arcgis': this.arcgisLyr.show = this.arcgisCheck;
-         if (this.arcgisCheck) {
-            viewer.camera.setView({
-              destination: Cesium.Rectangle.fromDegrees(114.591, -45.837, 148.970, -5.730)
-            });
-          }
+          this.flyToAus(this.arcgisCheck);
           break;
         case 'tms': this.tmsLyr.show = this.tmsCheck;
-
+          this.flyToAus(this.tmsCheck);
           break;
         case 'img': this.imgLyr.show = this.imgCheck;
           break;
         case 'wms':
           this.wmsLyr.show = this.wmsCheck;
-          if (this.wmsCheck) {
-            viewer.camera.setView({
-              destination: Cesium.Rectangle.fromDegrees(114.591, -45.837, 148.970, -5.730)
-            });
-          }
+
           break;
         default: break;
+      }
+    },
+
+    flyToAus(state) {
+      if (state) {
+        viewer.camera.setView({
+          destination: Cesium.Rectangle.fromDegrees(114.591, -45.837, 148.970, -5.730)
+        });
       }
     }
 
