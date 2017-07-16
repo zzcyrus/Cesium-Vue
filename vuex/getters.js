@@ -1,5 +1,6 @@
 
-export const getShow = state => state.show
+
+export const getModuleShow = state => state.show
 
 
 

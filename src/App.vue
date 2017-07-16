@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-  
+    
     <CesiumMenu></CesiumMenu>
+
+    <Terrain></Terrain>
+
     <VectorLayer></VectorLayer>
   
   </div>
@@ -10,13 +13,17 @@
 <script>
 
 import CesiumMenu from './views/CesiumMenu.vue'
+
+import Terrain from './views/ImageTerrain/Terrain.vue'
+
 import VectorLayer from './views/layers/VectorLayer.vue'
 
 
 export default {
   components: {
-    'VectorLayer': VectorLayer,
-    'CesiumMenu': CesiumMenu
+    'CesiumMenu': CesiumMenu,
+    'Terrain':Terrain,
+    'VectorLayer': VectorLayer
   },
   data() {
     return {

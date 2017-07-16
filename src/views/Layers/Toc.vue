@@ -1,11 +1,8 @@
 <template>
-  <div id="vectorLayer">
+  <div id="toc">
     <drawer :show="drawerShow" :pos="pos" :tran="tran" @change-show="changeDrawerShow">
       <div class="layout" slot="drawer">
-        <el-checkbox v-model="tmsCheck" @change="changeShow('tms')">TMS图层</el-checkbox>
-        <el-checkbox v-model="imgCheck" @change="changeShow('img')">图片图层</el-checkbox>
-        <el-checkbox v-model="arcgisCheck" @change="changeShow('arcgis')">Arcgis图层</el-checkbox>
-        <el-checkbox v-model="wmsCheck" @change="changeShow('wms')">WMS图层</el-checkbox>
+        <!-- TODO tree组件 -->
       </div>
     </drawer>
   </div>

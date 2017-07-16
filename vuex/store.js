@@ -9,7 +9,8 @@ import mutations from './mutations'
 Vue.use(Vuex)
 
 const state = {
-    show: 'hot',
+    show: true,
+    
 }
 
 export default new Vuex.Store({
