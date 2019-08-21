@@ -1,32 +1,24 @@
+# A Cesium-Vue-CLI-Webpack Project
 
-# A Cesium-Vue-Webpack Project
+webpack latest Vue-CLI and Cesium, you can see the example in router `about` page
 
-这是一个使用Vue，Element-UI搭建的关于Cesium的使用平台，供学习使用
+- 最新版本的 Vue-CLI 3.0 和 Cesium 1.6, Cesium 的初始化在 `about` 页面可以看到
+- 老版本的 Cesium-Vue 可以在`old`分支上找到
 
-## Environment
+## Project setup
 
-`Node >= 6`
-
-## Start
-
- - Clone or download this repository
- - Enter your local directory, and install dependencies:
-
-``` bash
-npm install
+```
+yarn install
 ```
 
-## Develop
+### develop
 
-``` bash
-# serve with hot reload at localhost:8010
-npm run dev
+```
+yarn run serve
 ```
 
-## Build
+### build
 
-``` bash
-# build for production with minification
-npm run build
 ```
-
+yarn run build
+```

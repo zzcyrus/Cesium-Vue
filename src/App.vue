@@ -1,55 +1,29 @@
 <template>
   <div id="app">
-    
-    <CesiumMenu></CesiumMenu>
-
-    <Terrain></Terrain>
-
-    <VectorLayer></VectorLayer>
-  
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </div>
+    <router-view />
   </div>
 </template>
 
-<script>
-
-import CesiumMenu from './views/CesiumMenu.vue'
-
-import Terrain from './views/ImageTerrain/Terrain.vue'
-
-import VectorLayer from './views/layers/VectorLayer.vue'
-
-
-export default {
-  components: {
-    'CesiumMenu': CesiumMenu,
-    'Terrain':Terrain,
-    'VectorLayer': VectorLayer
-  },
-  data() {
-    return {
-
-    }
-  },
-
-  methods: {
-    startHacking() {
-
+<style lang="scss">
+#app {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+#nav {
+  padding: 30px;
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+    &.router-link-exact-active {
+      color: #42b983;
     }
   }
-}
-</script>
-
-<style>
-body {
-  font-family: Helvetica, sans-serif;
-}
-
-#cesiumContainer {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background: transparent;
 }
 </style>
