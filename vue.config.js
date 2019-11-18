@@ -18,7 +18,6 @@ module.exports = {
       }
     },
     module: {
-      unknownContextCritical: /^.\/.*$/,
       unknownContextCritical: false
     },
     plugins: plugins
